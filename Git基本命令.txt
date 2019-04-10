@@ -1,0 +1,175 @@
+GIt官网下载：https://www.git-scm.com/download/win
+
+
+上传到GitHub操作步骤：(先下载，安装完成git，在进行操作)
+
+1. 在GitHub上建立项目,保存git@github.com:XXX/XXX.git的地址。
+
+2.Windows下，选择Git Bash，在命令行中完成一切
+
+git config --global user.name 'PengjuCao'
+
+git config --global user.email '18737008789@163.com'
+
+3.下面就开始生成密钥和提交密钥
+
+ssh-keygen -t rsa -C'18737008789@163.com'
+
+4.打开Key保存的位置，里面会有三个文件，
+找到id_rsa.pub，用文本编辑器打开，复制里面的全部字符。
+到GitHub，在右上方工具栏里找到Account Settings。
+在这个页面上有一个SSH Public Keys标签，选择Add another public key。
+Title可以随便填一个，Key就粘贴刚才的字符，提交。
+
+5.找到自己要分享上传的代码文件夹，右击选择Git Bash，
+或者在Git Bash中进入这个文件夹。建立一个仓库：
+ 
+git init
+
+选择要添加进仓库的文件：
+
+git add . (.表示分享所有)
+
+6.提交到本地的仓库
+
+git commit -m '提交的说明注释'
+
+7.添加远程地址
+
+git remote add origin git@github.com:bestking1/xiaomi.git
+
+8.上传到github
+
+git push -u origin master
+
+
+注意：
+ 如果输入 git push origin master
+提示出错信息：error:failed to push som refs to …….
+解决办法如下：
+1、先输入 git pull origin master //先把远程服务器github上面的文件拉下来
+2、再输入 git push origin master
+3、如果出现报错 fatal: Couldn’t find remote ref master或者fatal: ‘origin’ does not appear to be a git repository以及fatal: Could not read from remote repository.
+
+4、则需要重新输入git@github.com:quantmod/JavaCrawl.g
+
+
+
+
+
+一.基本信息设置
+
+1. 设置用户名
+
+git config --global user.name 'bestking1'
+
+2. 设置用户名邮箱
+
+git config --global user.email '1656869198@qq.com'
+
+3.查看设置
+
+git config --list
+
+该设置在github仓库主页显示谁提交了该文件
+
+
+4.下面就开始生成密钥和提交密钥
+
+ssh-keygen -t rsa -C'1656869198@qq.com'
+
+5.添加远程地址：
+
+git remote add origin git@github.com:XXX/XXX.git
+
+
+6.上传到github
+
+git push -u origin master
+
+
+
+二.初始化一个新的Git仓库
+
+1.创建文件夹
+
+mkdir 文件夹名称
+
+2.在文件内初始化git（创建git仓库）
+
+cd 文件夹名称
+git init
+
+(初始化后，文件夹中会显示.git文件或打开电脑的隐藏)
+
+三.向仓库添加文件
+
+1. 创建文件
+
+touch 文件夹名称 
+
+2. 添加到暂存区
+                     
+git add 文件夹名称                      
+
+3. 提交到仓库 
+                 
+git commit -m  '提交描述'  
+             
+git status
+
+四.修改仓库文件
+vi a1.php
+cat a1.php
+git status
+
+五.删除仓库文件
+
+1.删除文件
+
+rm 文件夹名称
+
+2.从Git中删除文件
+
+git rm 文件夹名称
+
+3.提交操作
+
+git commit -m '描述'
+
+
+六.将本地仓库同步到git远程仓库中
+
+git push
+
+
+
+七.Git克隆操作（将远程仓库（github对应的项目）复制到本地）
+
+git clone 仓库地址 (如：git clone https://github.com/itcastphgit1/test.git)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
